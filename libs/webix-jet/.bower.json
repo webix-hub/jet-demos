@@ -1,0 +1,36 @@
+{
+  "name": "webix-mvc-core",
+  "version": "0.2.0",
+  "homepage": "https://github.com/mkozhukh/webix-mvc",
+  "authors": [
+    "Maksim Kozhukh <mkozhukh@ya.ru>"
+  ],
+  "description": "Webix MVC micro framework",
+  "main": "core.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "webix",
+    "mvc",
+    "app",
+    "framework"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.2.0",
+    "commit": "1814d64b9e9add18279dc5eeec119584ed6549ba"
+  },
+  "_source": "git://github.com/mkozhukh/webix-mvc.git",
+  "_target": "~0.2.0",
+  "_originalSource": "webix-mvc-core"
+}
