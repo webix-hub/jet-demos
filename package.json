@@ -1,0 +1,26 @@
+{
+  "name": "My-App",
+  "version": "0.1.0",
+  "description": "My App!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webix"
+  ],
+  "devDependencies": {
+    "event-stream": "^3.3.1",
+    "glob": "^5.0.13",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^1.2.5",
+    "gulp-jshint": "^1.11.2",
+    "gulp-less": "^3.0.3",
+    "gulp-replace": "^0.5.3",
+    "gulp-requirejs": "^0.1.3",
+    "gulp-rimraf": "^0.1.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0"
+  }
+}
