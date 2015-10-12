@@ -1,4 +1,1 @@
-My App!
-================
-
-Based on [Webix UI](http://webix.com)
+The demo illustrates loading an application with data via a model
