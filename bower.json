@@ -1,0 +1,22 @@
+{
+  "name": "Test-App 2",
+  "version": "0.1.0",
+  "description": "Test App 2",
+  "main": "index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "webix",
+    "app"
+  ],
+  "dependencies": {
+    "almond": "~0.3.1",
+    "webix": "~2.4.7",
+    "routie": "~0.3.2",
+    "requirejs": "~2.1.18",
+    "webix-jet": "~0.2.0",
+    "polyglot":"~0.4.3",
+    "less":"~2.5.1"
+  }
+}
