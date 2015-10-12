@@ -1,1 +1,1 @@
-The demo represents the configuration of view handlers
+The demo represents the configuration and usage of view handlers.
