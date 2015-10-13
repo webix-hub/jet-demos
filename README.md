@@ -1,4 +1,1 @@
-My App!
-================
-
-Based on [Webix UI](http://webix.com)
+The demo shows how views can be connected using a shared state
