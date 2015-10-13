@@ -1,4 +1,1 @@
-My App!
-================
-
-Based on [Webix UI](http://webix.com)
+The demo illustrates establishing connections between views with the help of events
