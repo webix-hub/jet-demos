@@ -1,1 +1,1 @@
-The demo shows multiple windows' creation using scope
+The demo shows multiple windows' creation using the $windows parameter.
