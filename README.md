@@ -1,4 +1,1 @@
-My App!
-================
-
-Based on [Webix UI](http://webix.com)
+The demo shows multiple windows' creation using scope
