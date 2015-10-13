@@ -1,4 +1,1 @@
-My App!
-================
-
-Based on [Webix UI](http://webix.com)
+The demo introduces the key points of localizing an application with Webix Jet
