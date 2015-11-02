@@ -3,31 +3,41 @@ define([
 ],function(records){
 
 	var ui = {
-		view:"datatable", autoConfig:true, editable:true, on:{
-			onItemClick:function(){
-				$$("win1").show();
-			}
-		}
+		rows:[
+			{ template:"Right click the datatable to see the context menu", css:{"text-align":"center"}, autoheight:true},
+			{ view:"datatable", id:"data", autoConfig:true, editable:true, on:{
+				onItemClick:function(){
+					$$("win1").show();
+				}
+			}}
+		]
+		
 	};
 
 	return {
 		$ui: ui,
+		//if multiple windows are needed
 		$windows:[
-			{ view:"window", id:"win2", position:"center",
-				head:{ cols:[
-					{}, 
-					{view:"icon", icon:"times", click:function(){
-						this.getTopParentView().hide();
-					}}
-				]},
-				body:"Data is loaded"
+			{
+				view:"contextmenu", id:"cmenu",
+				data:["Add","Rename","Delete",{ $template:"Separator" },"Info"],
+				on:{
+					onItemClick:function(id){
+						var context = this.getContext();
+						var dtable = context.obj;
+						var dataId = context.id;
+						webix.message("List item: <i>"+dtable.getItem(dataId).title+"</i> <br/>Context menu item: <i>"+this.getItem(id).value+"</i>");
+					}
+				}
 			},
-			{ view:"popup", id:"win1", position:"center", body:"You've clicked me!"}
+			{ view:"popup", id:"win1", position:"center", body:"Data is loaded!"}
 			
 		],
-		$oninit:function(view){
-			view.parse(records.data);
-			$$("win2").show();
+		$oninit:function(view, scope){
+			$$("cmenu").attachTo($$("data"));
+
+			$$("data").parse(records.data);
+			$$("win1").show();
 		}
 	};
 	
