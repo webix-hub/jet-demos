@@ -18,10 +18,10 @@ define([
 
 	return {
 		$ui: ui,
-		$oninit:function(view){
+		$oninit:function(view, $scope){
 			view.parse(records.data);
 
-			app.attachEvent("detailsModeChanged", function(mode){
+			$scope.on(app, "detailsModeChanged", function(mode){
                 view.showColumnBatch(mode);
             });
 		}
