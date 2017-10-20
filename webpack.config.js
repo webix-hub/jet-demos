@@ -13,7 +13,9 @@ module.exports = function(env) {
 			"plugins-theme" : "./sources/plugins-theme.js",
 			"plugins-locale" : "./sources/plugins-locale.js",
 			"plugins-status" : "./sources/plugins-status.js",
-			"routers-url" : "./sources/routers-url.js"
+			"routers-url" : "./sources/routers-url.js",
+			"guards" : "./sources/guards.js",
+			"windows" : "./sources/windows.js"
 		},
 		output: {
 			path: path.join(__dirname, "codebase"),
