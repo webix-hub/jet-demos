@@ -1,6 +1,6 @@
 import {JetApp, JetView, plugins} from "webix-jet";
 
-export default class StartView extends JetView {
+class StartView extends JetView {
 	config(){
 		return {
 			type:"space", rows:[

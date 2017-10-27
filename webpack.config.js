@@ -13,9 +13,15 @@ module.exports = function(env) {
 			"plugins-theme" : "./sources/plugins-theme.js",
 			"plugins-locale" : "./sources/plugins-locale.js",
 			"plugins-status" : "./sources/plugins-status.js",
+			"plugins-unload" : "./sources/plugins-unload.js",
+
 			"routers-url" : "./sources/routers-url.js",
-			"guards" : "./sources/guards.js",
-			"windows" : "./sources/windows.js"
+
+			"appguard" : "./sources/appguard.js",
+			"viewguard" : "./sources/viewguard.js",
+			"windows" : "./sources/windows.js",
+			"screensize" : "./sources/screensize.js",
+			"viewapp" : "./sources/viewapp.js"
 		},
 		output: {
 			path: path.join(__dirname, "codebase"),

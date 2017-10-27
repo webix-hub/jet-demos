@@ -1,6 +1,6 @@
 import {JetApp, JetView, plugins} from "webix-jet";
 
-export default class SettingsView extends JetView {
+class SettingsView extends JetView {
 	config(){
 		const _ = this.app.getService("locale")._;
 		const lang = this.app.getService("locale").getLang();
