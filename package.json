@@ -1,11 +1,11 @@
 {
   "name": "webix-jet-demos",
-  "version": "1.0.3",
+  "version": "1.0.8",
   "description": "Webix Jet Demos",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint sources/",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --host 0.0.0.0"
   },
   "keywords": [
     "webix",

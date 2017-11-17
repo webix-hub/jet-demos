@@ -21,6 +21,7 @@ module.exports = function(env) {
 			"viewguard" : "./sources/viewguard.js",
 			"windows" : "./sources/windows.js",
 			"screensize" : "./sources/screensize.js",
+			"viewresolve" : "./sources/viewresolve.js",
 			"viewapp" : "./sources/viewapp.js"
 		},
 		output: {
