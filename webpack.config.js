@@ -20,6 +20,8 @@ module.exports = function(env) {
 			"appguard" : "./sources/appguard.js",
 			"viewguard" : "./sources/viewguard.js",
 			"windows" : "./sources/windows.js",
+			"routes" : "./sources/routes.js",
+			"redirects" : "./sources/redirects.js",
 			"screensize" : "./sources/screensize.js",
 			"viewresolve" : "./sources/viewresolve.js",
 			"viewapp" : "./sources/viewapp.js"
