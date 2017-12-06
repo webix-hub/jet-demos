@@ -18,6 +18,7 @@ module.exports = function(env) {
 			"routers-url" : "./sources/routers-url.js",
 
 			"appguard" : "./sources/appguard.js",
+			"promises" : "./sources/promises.js",
 			"viewguard" : "./sources/viewguard.js",
 			"windows" : "./sources/windows.js",
 			"routes" : "./sources/routes.js",
