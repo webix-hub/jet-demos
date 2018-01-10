@@ -25,7 +25,8 @@ module.exports = function(env) {
 			"redirects" : "./sources/redirects.js",
 			"screensize" : "./sources/screensize.js",
 			"viewresolve" : "./sources/viewresolve.js",
-			"viewapp" : "./sources/viewapp.js"
+			"viewapp" : "./sources/viewapp.js",
+			"urlparams" : "./sources/urlparams.js"
 		},
 		output: {
 			path: path.join(__dirname, "codebase"),
