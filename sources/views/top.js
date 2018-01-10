@@ -6,7 +6,7 @@ export default class TopView extends JetView {
 		return {
 			type:"space", cols:[
 				{ view:"list", width: 200, select:true, data:[
-					{ value:"List", id:"list", route:"start"},
+					{ value:"List", id:"list", route:"area.list"},
 					{ value:"Form", id:"form", route:"area.left.form"},
 					{ value:"About", id:"about", route:"about"}
 				], click:function(id){

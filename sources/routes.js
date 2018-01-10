@@ -6,7 +6,7 @@ webix.ready(() => {
 		routes:		{
 			"/hi" 	: "/top/about",
 			"/form" : "/top/area.left.form",
-			"/list" : "/top/area.list",
+			"/list" : "/top/area.list"
 		},
 		debug:true
 	});
