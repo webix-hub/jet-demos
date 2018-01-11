@@ -1,5 +1,4 @@
 import {JetApp, JetView} from "webix-jet";
-import {changeUrl} from "webix-jet/helpers";
 
 class Page1 extends JetView {
 	config(){
