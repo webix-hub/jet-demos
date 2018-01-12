@@ -14,6 +14,7 @@
 }
 .status_error{
 	color:red;
+}
 
 /*login form*/
 .invalid_login .webix_header > div{
