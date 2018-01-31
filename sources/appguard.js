@@ -35,22 +35,21 @@ class TopView extends JetView {
 }
 
 
-webix.ready(() => {
-	const app = new JetApp({
-		id:			"windows",
-		start:		"/top/blocked",
-		views:{
-			top:		TopView,
-			allowed1:	allowed1,
-			allowed2:	allowed2,
-			blocked:	blocked
-		}
-	});
-
-	app.attachEvent("app:guard", function(url, view, nav){
-		if (url.indexOf("/blocked") !== -1){
-			nav.redirect = "/top/allowed1";
-		}
-	});
-	app.render();
+const app = new JetApp({
+	id:			"windows",
+	start:		"/top/blocked",
+	views:{
+		top:		TopView,
+		allowed1:	allowed1,
+		allowed2:	allowed2,
+		blocked:	blocked
+	}
 });
+
+app.attachEvent("app:guard", function(url, view, nav){
+	if (url.indexOf("/blocked") !== -1){
+		nav.redirect = "/top/allowed1";
+	}
+});
+
+export default app;

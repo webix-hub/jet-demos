@@ -71,18 +71,16 @@ class TopView extends JetView {
 }
 
 
-webix.ready(() => {
-	const app = new JetApp({
-		id:			"windows",
-		access:		"reader",
-		start:		"/top/blocked",
-		views:{
-			top:		TopView,
-			allowed:	allowed,
-			limited:	limited,
-			blocked:	blocked
-		}
-	});
-	
-	app.render();
+const app = new JetApp({
+	id:			"windows",
+	access:		"reader",
+	start:		"/top/blocked",
+	views:{
+		top:		TopView,
+		allowed:	allowed,
+		limited:	limited,
+		blocked:	blocked
+	}
 });
+	
+export default app;

@@ -41,16 +41,15 @@ class TopView extends JetView {
 }
 
 
-webix.ready(() => {
-	const app = new JetApp({
-		id:			"windows",
-		start:		"/top/direct",
-		views:{
-			top:		TopView,
-			promised:	promised,
-			direct:	direct
-		}
-	});
 
-	app.render();
+const app = new JetApp({
+	id:			"windows",
+	start:		"/top/direct",
+	views:{
+		top:		TopView,
+		promised:	promised,
+		direct:	direct
+	}
 });
+
+export default app;

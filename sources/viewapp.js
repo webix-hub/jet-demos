@@ -47,27 +47,26 @@ const TextView = () => ({ template:"Some text here" });
 
 
 
-webix.ready(() => {
-	const baseApp1 = () => {
-		return new JetApp({
-			start:		"/top/form",
-			router: 	EmptyRouter,
-			debug:true,
-			views:{
-				top:		TopView,
-				form:		FormView
-			}
-		});
-	};
-
-	const masterApp = new JetApp({
-		start:		"/top/details",
+const baseApp1 = () => {
+	return new JetApp({
+		start:		"/top/form",
+		router: 	EmptyRouter,
 		debug:true,
 		views:{
-			top:		MasterTopView,
-			details:	baseApp1,
-			text:		TextView
+			top:		TopView,
+			form:		FormView
 		}
-	});	
-	masterApp.render();
-});
+	});
+};
+
+const masterApp = new JetApp({
+	start:		"/top/details",
+	debug:true,
+	views:{
+		top:		MasterTopView,
+		details:	baseApp1,
+		text:		TextView
+	}
+});	
+
+export default masterApp;

@@ -24,14 +24,17 @@ class SettingsView extends JetView {
 }
 
 
-webix.ready(() => {
-	const app = new JetApp({
-		id:			"plugins-themes",
-		start:		"/start",
-		views:{
-			start: SettingsView
-		}
-	});
-	app.use(plugins.Theme);
-	app.render();
+
+const app = new JetApp({
+	id:			"plugins-themes",
+	start:		"/start",
+	views:{
+		start: SettingsView
+	}
 });
+
+export default function(){
+	//affect global styles, must be called only if you really plan to init the app
+	app.use(plugins.Theme);
+	return app;
+};

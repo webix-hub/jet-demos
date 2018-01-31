@@ -64,17 +64,14 @@ class DetailsView extends JetView {
 	}
 }
 
-webix.ready(() => {
-	const app = new JetApp({
-		start:		"/top/full/details",
-		views:		{
-			top: TopView,
-			details: DetailsView,
-			sub: SubView
-		},
-		debug:true
-	});
-
-
-	app.render();
+const app = new JetApp({
+	start:		"/top/full/details",
+	views:		{
+		top: TopView,
+		details: DetailsView,
+		sub: SubView
+	},
+	debug:true
 });
+
+export default app;

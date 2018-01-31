@@ -26,22 +26,20 @@ class StartView extends JetView {
 }
 
 
-webix.ready(() => {
-	const app = new JetApp({
-		id:			"plugins-themes",
-		start:		"/start",
-		views:{
-			start: StartView
-		}
-	});
+const app = new JetApp({
+	id:			"plugins-themes",
+	start:		"/start",
+	views:{
+		start: StartView
+	}
+});
 
-	app.render();
-
-	app.attachEvent("app:error:server", function(){
-		webix.alert({
-			title:"Data Saving Error",
-			width: 480,
-			text:"This sample has not server side,<br> so any attempt to save data will result in an error."
-		});
+app.attachEvent("app:error:server", function(){
+	webix.alert({
+		title:"Data Saving Error",
+		width: 480,
+		text:"This sample has not server side,<br> so any attempt to save data will result in an error."
 	});
 });
+
+export default app;

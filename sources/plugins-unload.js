@@ -14,7 +14,6 @@ class FormView extends JetView{
 		this.use(plugins.UnloadGuard, () => {
 			if (this.getRoot().validate())
 				return true;
-
 			return new Promise((res, rej) => {
 				webix.confirm({
 					text: "Are you sure ?",
@@ -28,13 +27,13 @@ class FormView extends JetView{
 
 const DetailsView = () => ({ template:"Data saved" });
 
-webix.ready(() => {
-	var app = new JetApp({
-		start:"/Form",
-		views:{
-			"Form":FormView,
-			"Details":DetailsView
-		}
-	});
-	app.render();
+
+var app = new JetApp({
+	start:"/Form",
+	views:{
+		"Form":FormView,
+		"Details":DetailsView
+	}
 });
+
+export default app;

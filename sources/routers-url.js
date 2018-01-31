@@ -23,19 +23,18 @@ const DetailsView = {
 	template:"Details page"
 };
 
-webix.ready(() => {
-	const app = new JetApp({
-		id:			"plugins-themes",
+const app = new JetApp({
+	id:			"plugins-themes",
 
-		router:		UrlRouter,
-		routerPrefix: "/routers-url",
+	router:		UrlRouter,
+	routerPrefix: "/routers-url",
 
-		start:		"/top/start",
-		views:{
-			top:		TopView,
-			start:		StartView,
-			details:	DetailsView
-		}
-	});
-	app.render();
+	start:		"/top/start",
+	views:{
+		top:		TopView,
+		start:		StartView,
+		details:	DetailsView
+	}
 });
+
+export default app;

@@ -62,14 +62,14 @@ export class StartView extends JetView {
 
 
 
-webix.ready(() => {
-	const app = new JetApp({
-		start:		"/start",
-		views:{
-			start: StartView
-		}
-	});
+const app = new JetApp({
+	start:		"/start",
+	views:{
+		start: StartView
+	}
+});
 
+export default function(){
 	const size =  () => document.body.offsetWidth > 800 ? "wide" : "small";
 	app.config.size = size();
 	webix.event(window, "resize", function(){
@@ -79,6 +79,6 @@ webix.ready(() => {
 			app.refresh();
 		}
 	});
-	
-	app.render();
-});
+
+	return app;
+}
