@@ -30,9 +30,9 @@ module.exports = function(env) {
 			extensions: [".js"],
 			modules: ["./sources", "node_modules"],
 			alias:{
+				//"webix-jet":path.resolve(__dirname, "../webix-jet/dist/"),
 				"jet-views":path.resolve(__dirname, "sources/views"),
-				"jet-locales":path.resolve(__dirname, "sources/locales"),
-				"webix-jet":path.resolve(__dirname, "../webix-jet/dist/")
+				"jet-locales":path.resolve(__dirname, "sources/locales")
 			}
 		},
 		//next config is used only by router-url sample
