@@ -15,6 +15,7 @@ import routersurl from "routers-url";
 import urlparams from "urlparams";
 import screensize from "screensize";
 import viewapp from "viewapp";
+import tabbar from "tabbar";
 
 
 const samples = new webix.DataCollection({ data:[
@@ -35,7 +36,8 @@ const samples = new webix.DataCollection({ data:[
 	{ group:3, value:"URL parameters", 		app: urlparams,		id:"urlparams" },
 
 	{ group:4, value:"Adapting to Screen Size",		app: screensize,	id:"screensize" },
-	{ group:4, value:"Using App as View", 			app: viewapp,		id:"viewapp" }
+	{ group:4, value:"Using App as View", 			app: viewapp,		id:"viewapp" },
+	{ group:4, value:"Using tabbar with Webix Jet",	app: tabbar,		id:"tabbar" },
 ]});
 
 
