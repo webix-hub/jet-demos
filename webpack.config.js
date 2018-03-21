@@ -30,7 +30,7 @@ module.exports = function(env) {
 			extensions: [".js"],
 			modules: ["./sources", "node_modules"],
 			alias:{
-				//"webix-jet":path.resolve(__dirname, "../webix-jet/dist/"),
+				"webix-jet":path.resolve(__dirname, "../webix-jet/dist/"),
 				"jet-views":path.resolve(__dirname, "sources/views"),
 				"jet-locales":path.resolve(__dirname, "sources/locales")
 			}
