@@ -108,3 +108,8 @@
 	margin:10px;
 	cursor: pointer;
 }
+
+.silver >  .webix_template{
+	background: #888;
+	color: white;
+}
