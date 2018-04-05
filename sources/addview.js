@@ -1,4 +1,5 @@
 import {JetApp, JetView} from "webix-jet";
+let number = 3;
 
 class AdminView1 extends JetView {
 	config(){
@@ -25,16 +26,13 @@ class AdminView3 extends JetView {
 		return { 
 			height:50,
 			css:"silver",
-			template: "Admin view 3 <br> Scope: #scope#",
+			template: "Admin view #number# <br> The dynamic one",
 			on:{
 				onBeforeRender:function(){
-					this.data.scope = this.$scope.getScopeName();
+					this.data.number = this.data.number || (number++);
 				}
 			}
 		};
-	}
-	getScopeName(){
-		return "Correct Scope";
 	}
 }
 
@@ -64,31 +62,12 @@ class TopView extends JetView {
 
 				
 				{ view:"button", inputWidth:200, value:"Add view below", click:()=>{
-					this.$$("main3").addView({ header: "Admin View 3", body:AdminView3});
-				}},
-				{ id:"main3", view:"tabview", cells:[
-					{ header:"Admin View 1", body:AdminView1},
-					{ header:"Admin View 2", body:AdminView2}
-				]},
-
-				{ view:"button", inputWidth:200, value:"Add view below", click:()=>{
 					this.$$("main5").addView( AdminView3 );
 				}},
 				{ id:"main5", view:"carousel", cols:[
 					AdminView1,
 					AdminView2
 				]},
-
-				{ view:"button", inputWidth:200, value:"Add view below", inputWidth:200, click:()=>{
-					var uid = webix.uid();
-					this.$$("tabs").addOption({ id:uid, value:"Admin View 3" });
-					this.$$("main4").addView({ id:uid, $subview:  AdminView3});
-				}},
-				{ id:"tabs", view:"tabbar", multiview:true, options:["Admin View 1", "Admin View 2"]},
-				{ id:"main4", cells:[
-					{ id:"Admin View 1", $subview:AdminView1 },
-					{ id:"Admin View 2", $subview:AdminView2 }
-				]}
 			]
 		};
 	}

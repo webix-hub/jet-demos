@@ -1,4 +1,5 @@
-import {JetApp, JetView} from "webix-jet";
+import {JetApp, JetView, IJetApp} from "webix-jet";
+let number = 3;
 
 // It is important to NOT DEFINE top level ID
 // for the content which will be hosted 
@@ -6,6 +7,8 @@ import {JetApp, JetView} from "webix-jet";
 class AdminView1 extends JetView {
 	config(){
 		return {
+			height:50,
+			css:"silver",
 			template:"Admin view 1 <br> Dashboard"
 		};
 	}
@@ -14,15 +17,25 @@ class AdminView1 extends JetView {
 class AdminView2 extends JetView {
 	config(){
 		return {
+			height:50,
+			css:"silver",
 			template:"Admin view 2 <br> Meta info"
 		};
 	}
 };
 
 class AdminView3 extends JetView {
+	constructor(app, name, data){
+		super(app, name);
+
+		this.customData = data || { number: 100 };
+	}
 	config(){
 		return { 
-			template:"Admin view 3 <br> Settings "
+			height:50,
+			css:"silver",
+			template: "Admin view #number# <br> The dynamic one",
+			data: this.customData
 		};
 	}
 }
@@ -32,19 +45,32 @@ class TopView extends JetView {
 		return {
 			type: "space",
 			rows: [
-				{ view:"tabview", cells:[
-					{ header:"Dashboard", body: AdminView1 },
-					{ header:"Meta Info", body: AdminView2 },
-					{ header:"Settings", body: AdminView3 }
+				{ view:"button", inputWidth:200, value:"Add view below", click:()=>{
+					this.$$("main3").addView({ 
+						header: "Admin View "+number,
+						// we can use both
+						// body: AdminView3
+						// and 
+						// body: new AdminView3(app, name)
+						body: new AdminView3(this.app, "", { number: number++ })
+					});
+				}},
+				{ id:"main3", view:"tabview", cells:[
+					{ header:"Admin View 1", body:AdminView1},
+					{ header:"Admin View 2", body:AdminView2}
 				]},
-				{ height: 50 },
-				{ view:"segmented", multiview:true, options:[
-					"Dashboard", "Meta Info", "Settings"
-				], optionWidth: 120 },
-				{ view:"multiview", cells:[
-					{ $subview:AdminView1, id:"Dashboard" },
-					{ $subview:AdminView2, id:"Meta Info" },
-					{ $subview:AdminView3, id:"Settings" }
+				{ height:50 },
+				{ view:"button", inputWidth:200, value:"Add view below", inputWidth:200, click:()=>{
+					var uid = webix.uid();
+					this.$$("tabs").addOption({ id:uid, value:"Admin View 100" });
+					this.$$("main4").addView({ id:uid, $subview: AdminView3 });
+				}},
+				{ id:"tabs", view:"tabbar", multiview:true, options:[
+					"Admin View 1", "Admin View 2"
+				]},
+				{ id:"main4", cells:[
+					{ id:"Admin View 1", $subview:AdminView1 },
+					{ id:"Admin View 2", $subview:AdminView2 }
 				]}
 			]
 		};

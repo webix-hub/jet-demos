@@ -18,6 +18,7 @@ import viewapp from "viewapp";
 import tabbar from "tabbar";
 import dashboard from "dashboard";
 import addview from "addview";
+import datatable from "datatable";
 
 
 const samples = new webix.DataCollection({ data:[
@@ -39,9 +40,10 @@ const samples = new webix.DataCollection({ data:[
 
 	{ group:4, value:"Adapting to Screen Size",		app: screensize,	id:"screensize" },
 	{ group:4, value:"Using App as View", 			app: viewapp,		id:"viewapp" },
-	{ group:4, value:"Using tabbar with Webix Jet",	app: tabbar,		id:"tabbar" },
-	{ group:4, value:"Using dashboard with Webix Jet",	app: dashboard,		id:"dashboard" },
-	{ group:4, value:"Dynamic views with Webix Jet",	app: addview,		id:"addview" },
+	{ group:4, value:"Using Tabbar",				app: tabbar,		id:"tabbar" },
+	{ group:4, value:"Using Dashboard",				app: dashboard,		id:"dashboard" },
+	{ group:4, value:"Using Datatable with Subview",app: datatable,		id:"datatable" },
+	{ group:4, value:"Dynamic views (addView)",	app: addview,		id:"addview" },
 ]});
 
 
