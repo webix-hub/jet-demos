@@ -19,6 +19,7 @@ import tabbar from "tabbar";
 import dashboard from "dashboard";
 import addview from "addview";
 import datatable from "datatable";
+import webixview from "webixview";
 
 
 const samples = new webix.DataCollection({ data:[
@@ -39,7 +40,8 @@ const samples = new webix.DataCollection({ data:[
 	{ group:3, value:"URL parameters", 		app: urlparams,		id:"urlparams" },
 
 	{ group:4, value:"Adapting to Screen Size",		app: screensize,	id:"screensize" },
-	{ group:4, value:"Using App as View", 			app: viewapp,		id:"viewapp" },
+	{ group:4, value:"Using App as Jet View", 		app: viewapp,		id:"viewapp" },
+	{ group:4, value:"Using App as Webix View", 	app: webixview,		id:"webixview" },
 	{ group:4, value:"Using Tabbar",				app: tabbar,		id:"tabbar" },
 	{ group:4, value:"Using Dashboard",				app: dashboard,		id:"dashboard" },
 	{ group:4, value:"Using Datatable with Subview",app: datatable,		id:"datatable" },
