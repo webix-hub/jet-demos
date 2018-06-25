@@ -4,8 +4,9 @@
       "targets": {
         "browsers": ["last 2 versions", "IE >= 11"]
       },
-      modules:false,
-      loose:true
+      "modules":false,
+      "loose":true
     }]
-  ]
+  ],
+  "plugins": ["syntax-dynamic-import"]
 }

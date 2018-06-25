@@ -9,13 +9,15 @@ module.exports = function(env) {
 	};
 
 	var config = {
+		mode: "development",
 		entry: {
 			"app" : "./sources/app.js"
 		},
 		output: {
 			path: path.join(__dirname, "codebase"),
 			publicPath:"/codebase/",
-			filename: "[name].js"
+			filename: "[name].js",
+			chunkFilename: "[name].bundle.js"
 		},
 		devtool: "inline-source-map",
 		module: {
@@ -28,7 +30,7 @@ module.exports = function(env) {
 		},
 		resolve: {
 			extensions: [".js"],
-			modules: ["./sources", "node_modules"],
+			modules: ["../","./sources", "node_modules"],
 			alias:{
 				//"webix-jet":path.resolve(__dirname, "../webix-jet/dist/"),
 				"jet-views":path.resolve(__dirname, "sources/views"),

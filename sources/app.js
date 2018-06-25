@@ -20,6 +20,8 @@ import dashboard from "dashboard";
 import addview from "addview";
 import datatable from "datatable";
 import webixview from "webixview";
+import bundles from "bundles";
+import refresh from "refresh";
 
 
 const samples = new webix.DataCollection({ data:[
@@ -46,6 +48,8 @@ const samples = new webix.DataCollection({ data:[
 	{ group:4, value:"Using Dashboard",				app: dashboard,		id:"dashboard" },
 	{ group:4, value:"Using Datatable with Subview",app: datatable,		id:"datatable" },
 	{ group:4, value:"Dynamic views (addView)",	app: addview,		id:"addview" },
+	{ group:4, value:"Refresh view / app",	app: refresh,		id:"refresh" },
+	{ group:4, value:"Webpack bundles",	app: bundles,		id:"bundles" },
 ]});
 
 
