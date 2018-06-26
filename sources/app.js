@@ -1,25 +1,26 @@
 import {JetApp, JetView, EmptyRouter } from "webix-jet";
 
-import windows from "windows";
-import appguard from "appguard";
-import viewguard from "viewguard";
-import pluginsunload from "plugins-unload";
-import redirects from "redirects";
-import viewresolve from "viewresolve";
-import promises from "promises";
-import routes from "routes";
-import pluginslocale from "plugins-locale";
-import pluginstheme from "plugins-theme";
-import pluginsstatus from "plugins-status";
-import routersurl from "routers-url";
-import urlparams from "urlparams";
-import screensize from "screensize";
-import viewapp from "viewapp";
-import tabbar from "tabbar";
-import dashboard from "dashboard";
-import addview from "addview";
-import datatable from "datatable";
-import webixview from "webixview";
+import events from "./events";
+import windows from "./windows";
+import appguard from "./appguard";
+import viewguard from "./viewguard";
+import pluginsunload from "./plugins-unload";
+import redirects from "./redirects";
+import viewresolve from "./viewresolve";
+import promises from "./promises";
+import routes from "./routes";
+import pluginslocale from "./plugins-locale";
+import pluginstheme from "./plugins-theme";
+import pluginsstatus from "./plugins-status";
+import routersurl from "./routers-url";
+import urlparams from "./urlparams";
+import screensize from "./screensize";
+import viewapp from "./viewapp";
+import tabbar from "./tabbar";
+import dashboard from "./dashboard";
+import addview from "./addview";
+import datatable from "./datatable";
+import webixview from "./webixview";
 
 
 const samples = new webix.DataCollection({ data:[
@@ -31,6 +32,7 @@ const samples = new webix.DataCollection({ data:[
 	{ group:1, value:"Resolving Files", 	app: viewresolve,	id:"viewresolve" },
 	{ group:1, value:"Promises in views", 	app: promises,		id:"promises" },
 	{ group:1, value:"Url Routes", 			app: routes,		id:"routes" },
+	{ group:1, value:"View life-cycle", 	app: events,		id:"events" },
 
 	{ group:2, value:"Locales", 			app: pluginslocale,	id:"plugins-locale" },
 	{ group:2, value:"Themes", 				app: pluginstheme,	id:"plugins-theme" },
