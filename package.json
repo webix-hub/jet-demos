@@ -29,6 +29,6 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "webix-jet": "^1.6.0"
+    "webix-jet": "^1.6.1"
   }
 }
