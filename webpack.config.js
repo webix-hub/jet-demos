@@ -28,7 +28,7 @@ module.exports = function(env) {
 		},
 		resolve: {
 			extensions: [".js"],
-			modules: ["./sources", "node_modules"],
+			modules: ["../", "./sources", "node_modules"],
 			alias:{
 				//"webix-jet":path.resolve(__dirname, "../webix-jet/dist/"),
 				"jet-views":path.resolve(__dirname, "sources/views"),
