@@ -42,7 +42,7 @@ class TopView extends JetView {
 			type: "space",
 			rows: [
 				/* Layout */
-				{ view:"button", inputWidth:200, value:"Add view below", click:()=>{
+				{ view:"button", inputWidth:200, value:"Add view below", type:"form", click:()=>{
 					this.$$("main").addView(AdminView3);
 				}},
 				{ id:"main", cols:[
@@ -52,7 +52,7 @@ class TopView extends JetView {
 
 
 				
-				{ view:"button", value:"Add view below", inputWidth:200, click:()=>{
+				{ view:"button", value:"Add view below", type:"form", inputWidth:200, click:()=>{
 					this.$$("main2").addView({ view:"accordionitem", header: "Admin View 3", body:  AdminView3});
 				}},
 				{ id:"main2", view:"accordion", cols:[
@@ -61,7 +61,7 @@ class TopView extends JetView {
 				]},
 
 				
-				{ view:"button", inputWidth:200, value:"Add view below", click:()=>{
+				{ view:"button", inputWidth:200, type:"form", value:"Add view below", click:()=>{
 					this.$$("main5").addView( AdminView3 );
 				}},
 				{ id:"main5", view:"carousel", cols:[
