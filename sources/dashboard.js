@@ -41,7 +41,7 @@ class TopView extends JetView {
 							{ id:"3", value:"AdminView3", dx:2, dy:1 }
 						]
 					},
-					{ view:"button", value:"Reset", click:() => {
+					{ view:"button", value:"Reset", type:"form", click:() => {
 						this.$$("grid").clearAll();
 					}}
 				]},

@@ -45,7 +45,7 @@ class TopView extends JetView {
 		return {
 			type: "space",
 			rows: [
-				{ view:"button", inputWidth:200, value:"Add view below", click:()=>{
+				{ view:"button", inputWidth:200, value:"Add view below", type:"form", click:()=>{
 					this.$$("main3").addView({ 
 						header: "Admin View "+number,
 						// we can use both
@@ -60,7 +60,7 @@ class TopView extends JetView {
 					{ header:"Admin View 2", body:AdminView2}
 				]},
 				{ height:50 },
-				{ view:"button", inputWidth:200, value:"Add view below", inputWidth:200, click:()=>{
+				{ view:"button", inputWidth:200, value:"Add view below", type:"form", inputWidth:200, click:()=>{
 					var uid = webix.uid();
 					this.$$("tabs").addOption({ id:uid, value:"Admin View 100" });
 					this.$$("main4").addView({ id:uid, $subview: AdminView3 });

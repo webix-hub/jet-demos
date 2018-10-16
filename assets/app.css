@@ -8,12 +8,12 @@
 
 /*data loading status*/
 .status_good, .status_error, .status_saving{
-	text-align: center;
-	margin-left:-12px;
-	color: #666;
+    text-align: center;
+    margin-left:-12px;
+    color: #666;
 }
 .status_error{
-	color:red;
+    color:red;
 }
 
 /*login form*/
@@ -24,6 +24,7 @@
 .invalid_login{
     -webkit-animation: formshake .5s linear;
 }
+
 @-webkit-keyframes formshake {
     8%, 41% {
         -webkit-transform: translateX(-10px);
@@ -41,75 +42,7 @@
         -webkit-transform: translateX(0);
     }
 }
-
-/*siberia theme*/
-.webix_layout_toolbar.webix_toolbar.form-bottom-bar{
-	background: #34495E;
-}
-
-.center{
-	text-align: center;
-}
-
-.app-left-panel .webix_menu .webix_list_item.spacer:hover{
-	background: transparent;
-	cursor:default;
-}
-.webixapp{
-	background: #34495e;
-}
-.webix_layout_clean{
-	background: white;
-}
-
-/* unradius borders */
-.webix_menu {
-	border-radius: 0px;
-}
-
-/*left side menu*/
-.app-left-panel,
-.app-left-panel .webix_view,
-.app-left-panel .webix_menu .webix_list_item{
-	background: #34495e;
-	color:#ddd;
-}
-.app-left-panel .webix_menu .webix_list_item.webix_selected{
-	color:#fff;
-}
-.app-left-panel .webix_menu .webix_list_item:hover{
-	background-color: #f5f5f5;
-	color: #000;
-}
-.app-left-panel .webix_header .webix_template{
-	background-color: #34495e;
-	border-bottom:1px solid white;
-	text-align: center;
-	padding-left:0px;
-}
-
-/*right side panel*/
-.app-right-panel{
-	border-top-left-radius:4px;
-}
-.app-right-panel .webix_layout_wide{
-	background: #fff;
-}
-
-
-
 .theme-flat-shady .webix_layout_space{
-	background: #BFB8D1;
-}
-.navblock a{
-	display: block;
-	text-decoration: underline;
-	color: blue;
-	margin:10px;
-	cursor: pointer;
+    background: #BFB8D1;
 }
 
-.silver >  .webix_template{
-	background: #888;
-	color: white;
-}

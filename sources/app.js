@@ -61,7 +61,7 @@ class SamplesNavigation extends JetView {
 	config(){
 		return {
 			view:"scrollview", scroll:"x", body:{
-				cols:[
+				css:"webix_dark", margin:5, cols:[
 					{ header:"Functionality", body: { 
 						width: 320, view:"list", localId: "list1", click : showSample
 					}},
@@ -73,7 +73,7 @@ class SamplesNavigation extends JetView {
 							width: 320, view:"list", localId: "list3", click : showSample
 						}}
 					]},
-					{ header:"Recepies", body: { 
+					{ header:"Recipes", body: { 
 						width: 320, view:"list", localId: "list4", click : showSample
 					}}
 				]
