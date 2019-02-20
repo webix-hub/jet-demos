@@ -1,4 +1,4 @@
-import {JetApp, JetView, plugins} from "webix-jet";
+import {JetApp, JetView} from "webix-jet";
 
 const data = new webix.DataCollection({
 	url:"/assets/data.json"

@@ -35,7 +35,7 @@ class MySubApp extends JetApp{
 			}
 		});
 	}
-};
+}
 webix.protoUI({
 	name:"sub-app",
 	app: MySubApp

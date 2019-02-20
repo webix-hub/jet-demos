@@ -105,6 +105,6 @@ webix.ready(() => {
 		document.title = item.value;
 		app.render();
 	} else {
-		samplesApp.render()
+		samplesApp.render();
 	}
 });

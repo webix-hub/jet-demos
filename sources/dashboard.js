@@ -6,7 +6,7 @@ class AdminView1 extends JetView {
 			template:"Admin view 1 <br> Dashboard"
 		};
 	}
-};
+}
 
 class AdminView2 extends JetView {
 	config(){
@@ -14,7 +14,7 @@ class AdminView2 extends JetView {
 			template:"Admin view 2 <br> Meta info"
 		};
 	}
-};
+}
 
 class AdminView3 extends JetView {
 	config(){
@@ -26,7 +26,7 @@ class AdminView3 extends JetView {
 
 
 class TopView extends JetView {
-	 config(){
+	config(){
 		return {
 			type: "space",
 			cols: [
@@ -53,7 +53,7 @@ class TopView extends JetView {
 						factory:(obj) => {
 							obj.view = "panel";
 							obj.resize = true;
-							obj.body = this[$$("list").getItem(obj.name).value];
+							obj.body = this[webix.$$("list").getItem(obj.name).value];
 							return obj;
 						},
 						on:{

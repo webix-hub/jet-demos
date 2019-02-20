@@ -9,7 +9,7 @@ class AdminView1 extends JetView {
 			template:"Admin view 1 <br> Dashboard"
 		};
 	}
-};
+}
 
 class AdminView2 extends JetView {
 	config(){
@@ -19,7 +19,7 @@ class AdminView2 extends JetView {
 			template:"Admin view 2 <br> Meta info"
 		};
 	}
-};
+}
 
 class AdminView3 extends JetView {
 	config(){

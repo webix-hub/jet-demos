@@ -1,4 +1,4 @@
-import {JetApp, JetView, EmptyRouter } from "webix-jet";
+import {JetApp} from "webix-jet";
 
 const app = new JetApp({
 	start:		"/top/start",

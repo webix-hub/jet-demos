@@ -37,4 +37,4 @@ export default function(){
 	//affect global styles, must be called only if you really plan to init the app
 	app.use(plugins.Theme);
 	return app;
-};
+}

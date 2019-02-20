@@ -1,4 +1,4 @@
-import {JetApp, JetView, EmptyRouter } from "webix-jet";
+import {JetApp, JetView } from "webix-jet";
 
 class AboutView extends JetView{
 	config(){

@@ -1,4 +1,4 @@
-import {JetApp, JetView, IJetApp} from "webix-jet";
+import {JetApp, JetView} from "webix-jet";
 let number = 3;
 
 // It is important to NOT DEFINE top level ID
@@ -12,7 +12,7 @@ class AdminView1 extends JetView {
 			template:"Admin view 1 <br> Dashboard"
 		};
 	}
-};
+}
 
 class AdminView2 extends JetView {
 	config(){
@@ -22,7 +22,7 @@ class AdminView2 extends JetView {
 			template:"Admin view 2 <br> Meta info"
 		};
 	}
-};
+}
 
 class AdminView3 extends JetView {
 	constructor(app, name, data){
@@ -41,7 +41,7 @@ class AdminView3 extends JetView {
 }
 
 class TopView extends JetView {
-	 config(){
+	config(){
 		return {
 			type: "space",
 			rows: [
@@ -60,7 +60,7 @@ class TopView extends JetView {
 					{ header:"Admin View 2", body:AdminView2}
 				]},
 				{ height:50 },
-				{ view:"button", inputWidth:200, value:"Add view below", type:"form", inputWidth:200, click:()=>{
+				{ view:"button", inputWidth:200, value:"Add view below", type:"form", click:()=>{
 					var uid = webix.uid();
 					this.$$("tabs").addOption({ id:uid, value:"Admin View 100" });
 					this.$$("main4").addView({ id:uid, $subview: AdminView3 });

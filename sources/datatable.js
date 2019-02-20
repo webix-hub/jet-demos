@@ -11,7 +11,7 @@ class SubLayout extends JetView {
 				{ type:"header", template: () => this.customData.title },
 				SubTemplate
 			]
-		}
+		};
 	}
 }
 
@@ -25,7 +25,7 @@ class SubTemplate extends JetView {
 
 
 class TopView extends JetView {
-	 config(){
+	config(){
 		return {
 			view:"datatable",
 			subview: (obj, target) => {
@@ -38,9 +38,9 @@ class TopView extends JetView {
 			},
 			columns:[
 				{ id:"title",   header:"Title", sort:"string",
-				template:"{common.subrow()} #title#", width:220 },
+					template:"{common.subrow()} #title#", width:220 },
 				{ id:"year",    header:"Year",  width:100, sort:"int"},
-        		{ id:"votes",   header:"Votes", width:100,  sort:"int"}
+				{ id:"votes",   header:"Votes", width:100,  sort:"int"}
 			],
 			data:[
 				{ id:1, title:"The Shawshank Redemption", year:1994, votes:678790 },

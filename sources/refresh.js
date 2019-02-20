@@ -13,7 +13,7 @@ class ContentView extends JetView{
 		for (var i=0; i<this.$count; i++){
 			lines.push({
 				view:"list", select:true, data:["One", "Two", "Three"]
-			})
+			});
 		}
 
 		return { rows:[
