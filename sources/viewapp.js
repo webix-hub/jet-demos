@@ -1,4 +1,4 @@
-import {JetApp, JetView, EmptyRouter } from "webix-jet";
+import {JetApp, JetView, SubRouter } from "webix-jet";
 
 class TopView extends JetView {
 	config(){
@@ -47,11 +47,12 @@ const TextView = () => ({ template:"Some text here" });
 
 
 
-const baseApp1 = () => {
+const baseApp1 = (app) => {
 	return new JetApp({
 		start:		"/top/form",
-		router: 	EmptyRouter,
+		router: 	SubRouter,
 		debug:true,
+		app,
 		views:{
 			top:		TopView,
 			form:		FormView
