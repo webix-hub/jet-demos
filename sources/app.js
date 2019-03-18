@@ -22,6 +22,7 @@ import datatable from "datatable";
 import webixview from "webixview";
 import bundles from "bundles";
 import refresh from "refresh";
+import conditionals from "conditionals";
 
 
 const samples = new webix.DataCollection({ data:[
@@ -33,6 +34,7 @@ const samples = new webix.DataCollection({ data:[
 	{ group:1, value:"Resolving Files", 	app: viewresolve,	id:"viewresolve" },
 	{ group:1, value:"Promises in views", 	app: promises,		id:"promises" },
 	{ group:1, value:"Url Routes", 			app: routes,		id:"routes" },
+	{ group:1, value:"Conditional views",	app: conditionals,	id:"conditionals" },
 
 	{ group:2, value:"Locales", 			app: pluginslocale,	id:"plugins-locale" },
 	{ group:2, value:"Themes", 				app: pluginstheme,	id:"plugins-theme" },
