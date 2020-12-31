@@ -24,7 +24,7 @@ module.exports = function(env) {
 			rules: [
 				{
 					test: /\.js$/,
-					loader: "babel-loader?" + JSON.stringify(babelSettings)
+					use: "babel-loader?" + JSON.stringify(babelSettings)
 				}
 			]
 		},
