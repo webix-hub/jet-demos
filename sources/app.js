@@ -1,27 +1,26 @@
 import {JetApp, JetView, EmptyRouter } from "webix-jet";
 
-import windows from "windows";
-import appguard from "appguard";
-import viewguard from "viewguard";
-import pluginsunload from "plugins-unload";
-import redirects from "redirects";
-import viewresolve from "viewresolve";
-import promises from "promises";
-import routes from "routes";
-import pluginslocale from "plugins-locale";
-import pluginstheme from "plugins-theme";
-import pluginsstatus from "plugins-status";
-import routersurl from "routers-url";
-import urlparams from "urlparams";
-import screensize from "screensize";
-import viewapp from "viewapp";
-import tabbar from "tabbar";
-import dashboard from "dashboard";
-import addview from "addview";
-import datatable from "datatable";
-import webixview from "webixview";
-import bundles from "bundles";
-import refresh from "refresh";
+import windows from "./windows";
+import appguard from "./appguard";
+import viewguard from "./viewguard";
+import pluginsunload from "./plugins-unload";
+import redirects from "./redirects";
+import viewresolve from "./viewresolve";
+import promises from "./promises";
+import routes from "./routes";
+import pluginslocale from "./plugins-locale";
+import pluginstheme from "./plugins-theme";
+import pluginsstatus from "./plugins-status";
+import routersurl from "./routers-url";
+import urlparams from "./urlparams";
+import screensize from "./screensize";
+import viewapp from "./viewapp";
+import tabbar from "./tabbar";
+import dashboard from "./dashboard";
+import addview from "./addview";
+import datatable from "./datatable";
+import webixview from "./webixview";
+import refresh from "./refresh";
 
 
 const samples = new webix.DataCollection({ data:[
@@ -49,7 +48,6 @@ const samples = new webix.DataCollection({ data:[
 	{ group:4, value:"Using Datatable with Subview",app: datatable,		id:"datatable" },
 	{ group:4, value:"Dynamic views (addView)",	app: addview,		id:"addview" },
 	{ group:4, value:"Refresh view / app",	app: refresh,		id:"refresh" },
-	{ group:4, value:"Webpack bundles",	app: bundles,		id:"bundles" },
 ]});
 
 

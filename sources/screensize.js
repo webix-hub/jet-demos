@@ -1,7 +1,7 @@
 import {JetApp, JetView} from "webix-jet";
 
 const data = new webix.DataCollection({
-	url:"/assets/data.json"
+	url:"/data.json"
 });
 
 export class ListA extends JetView {

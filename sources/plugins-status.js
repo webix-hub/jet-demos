@@ -18,7 +18,7 @@ class StartView extends JetView {
 		});
 
 		const data = new webix.DataCollection({
-			url:"/assets/data.json",
+			url:"/data.json",
 			save:"//docs.webix.com/wrongurl"
 		});
 		webix.$$("table").parse(data);

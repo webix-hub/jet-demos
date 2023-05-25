@@ -1,5 +1,12 @@
 import {JetApp, JetView, plugins} from "webix-jet";
 
+// locales, optional
+import en from "./locales/en";
+import es from "./locales/es";
+
+const locales = { en, es };
+const path = name => Promise.resolve(locales[name]);
+
 class SettingsView extends JetView {
 	config(){
 		const _ = this.app.getService("locale")._;
@@ -32,6 +39,6 @@ const app = new JetApp({
 		start: SettingsView
 	}
 });
-app.use(plugins.Locale);
+app.use(plugins.Locale, { path });
 
 export default app;

@@ -8,9 +8,10 @@ class SettingsView extends JetView {
 			type:"space", rows:[
 				{ template:"Settings", type:"header" },
 				{ name:"skin", optionWidth: 120, view:"segmented", label:"Theme", options:[
-					{id:"flat-default", value:"Default"},
-					{id:"flat-shady", value:"Shady"},
-					{id:"compact-default", value:"Compact"}
+					{id:"material-default", value:"Default"},
+					{id:"material-shady", value:"Shady"},
+					{id:"mini-default", value:"Compact"},
+					{id:"flat-default", value:"Flat"}
 				], click:() => this.toggleTheme(), value:theme },
 				{}
 			]
@@ -35,6 +36,7 @@ const app = new JetApp({
 
 export default function(){
 	//affect global styles, must be called only if you really plan to init the app
+	debugger;
 	app.use(plugins.Theme);
 	return app;
 }

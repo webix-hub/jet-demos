@@ -1,7 +1,7 @@
 Webix Jet Demos
 ================
 
-Repo contains demos for Jet 1.x
+Repo contains demos for Jet 3.x
 
 ### How to start
 
